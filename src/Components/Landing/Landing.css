@@ -1,0 +1,99 @@
+/* Landing page */
+.landing{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 0 2rem;
+    margin-top: 2.5rem;
+}
+
+.developer-img{
+    width: 100%;
+    max-width: 400px;
+}
+
+.landing-h1{
+    font-size: 5rem;
+    letter-spacing: 0.3rem;
+    line-height: 4rem;
+}
+
+.landing-h2{
+    font-size: 3rem;
+}
+
+.linkedin-logo, .github-logo, .mail-logo{
+    font-size: 2rem;
+}
+
+.linkedin-logo:hover, .github-logo:hover, .mail-logo:hover{
+    cursor: pointer;
+}
+
+.contact-icons{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.linkedin-logo{
+    color: #0A66C2; 
+}
+.github-logo{
+    color: #171515;
+}
+.mail-logo{
+    color:#BB001B;
+}
+
+.icon-container{
+    display: flex;
+    justify-content: center;
+}
+
+.html-logo{
+    font-size: 2rem;
+    color: #e34c26;
+}
+.css-logo{
+    font-size: 2rem;
+    color: #264de4;
+}
+.react-logo{
+    font-size: 2rem;
+    color: #61DBFB;
+}
+.node-logo{
+    font-size: 2rem;
+    color: #68a063;
+}
+.mongo-logo{
+    font-size: 2rem;
+    color: #4DB33D;
+}
+.dotnet-logo{
+    font-size: 2rem;
+    color: #512bd4;
+}
+.postgresql-logo{
+    font-size: 2rem;
+    color: #336791;
+}
+.js-logo{
+    font-size: 2rem;
+    color: #F0DB4F;
+}
+
+@media screen and (max-width:900px) {
+    .landing-h1{
+        font-size: 4rem;
+    }
+    
+    .landing-h2{
+        font-size: 2.5rem;
+    }
+    
+    .landing{
+        flex-direction: column;
+    }
+}
