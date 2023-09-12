@@ -4,7 +4,7 @@ import Landing from './Components/Landing/Landing';
 import NavBar from './Components/NavBar/NavBar'
 import TopSeparator from './Components/Separator/TopSeparator';
 import BottomSeparator from './Components/Separator/BottomSeparator';
-import { About, Skills } from './Components';
+import { About, Projects, Skills, Contact } from './Components';
 
 function App() {
   return (
@@ -18,8 +18,10 @@ function App() {
         <About />
         <BottomSeparator />
         <Skills />
-        <section id='featured'></section>
-        <section id='contact'></section>
+        <TopSeparator />
+        <Projects />
+        <BottomSeparator />
+        <Contact />
       </main>
       <footer>
 

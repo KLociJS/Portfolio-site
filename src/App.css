@@ -34,3 +34,11 @@ p,a,button,input{
     text-align: center;
 }
 
+.section-header-light{
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+    color: #f5f5f5;
+    width: 100%;
+    text-align: center;
+}
+
