@@ -62,6 +62,13 @@
     background-color: #7CEA9C;
     color: #111344;
 }
+
+@media screen and (max-width:900px){
+    .tech{
+        width: 100px;
+    }
+}
+
 .fill{
     width: 90%;
     height: 2rem;
