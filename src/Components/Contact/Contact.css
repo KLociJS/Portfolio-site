@@ -1,6 +1,7 @@
 .contact-container{
     max-width: 1200px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 5rem auto;
@@ -32,4 +33,10 @@
 }
 .form>textarea{
     resize: none;
+}
+
+.check-icon{
+    color: #008000;
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
 }

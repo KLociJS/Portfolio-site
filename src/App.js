@@ -22,10 +22,8 @@ function App() {
         <Projects />
         <BottomSeparator />
         <Contact />
+        <TopSeparator />
       </main>
-      <footer>
-
-      </footer>
     </>
 
   );

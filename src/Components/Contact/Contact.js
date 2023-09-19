@@ -1,13 +1,19 @@
 import './Contact.css'
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm, ValidationError } from '@formspree/react'
+import { AiOutlineCheckCircle } from 'react-icons/ai'
+
 export default function Contact() {
-  const [state, handleSubmit] = useForm("xoqolqzn");
-  if (state.succeeded) {
-      return <p>Thanks for joining!</p>;
-  }
+  const [state, handleSubmit] = useForm("xoqolqzn")
+
   return (
     <div id='contact'>
         <div className='contact-container'>
+            {state.succeeded ? 
+            <>
+              <AiOutlineCheckCircle className='check-icon'/>
+              <h2>Thanks for contacting me!</h2>
+              <p>I'll reply as soon as possible.</p>
+            </> : 
             <form onSubmit={handleSubmit} className='form'>
                 <h2>Send me an email</h2>
                 <input
@@ -35,6 +41,7 @@ export default function Contact() {
                 Submit
                 </button>
             </form>
+            }
         </div>
     </div>
     
