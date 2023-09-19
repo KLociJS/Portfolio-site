@@ -7,7 +7,7 @@ import './Projects.css'
 
 export default function Projects() {
   return (
-    <section id='featured'>
+    <section id='projects'>
         <div className='project-section-container'>
             <h2 className='section-header-light'>My projects</h2>
             <div className='project-container'>

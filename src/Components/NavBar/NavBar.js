@@ -12,7 +12,7 @@ export default function NavBar() {
           <nav className={`nav-bar ${isOpen ? 'open' : ''}`}>
             <a href='#about'>About</a>
             <a href='#skills'>Skills</a>
-            <a href='#featured'>Projects</a>
+            <a href='#projects'>Projects</a>
             <a href='#contact'>Contact</a>
           </nav>
     </>
