@@ -1,31 +1,36 @@
-import './App.css'
-import Landing from './Components/Landing/Landing';
+import "./App.css";
+import Landing from "./Components/Landing/Landing";
 
-import NavBar from './Components/NavBar/NavBar'
-import TopSeparator from './Components/Separator/TopSeparator';
-import BottomSeparator from './Components/Separator/BottomSeparator';
-import { About, Projects, Skills, Contact } from './Components';
+import { About, Contact, Projects, Skills } from "./Components";
+import NavBar from "./Components/NavBar/NavBar";
+import BottomSeparator from "./Components/Separator/BottomSeparator";
+import TopSeparator from "./Components/Separator/TopSeparator";
+import useIntersectionObserver from "./Hooks/useIntersectionObserver";
+import { ObserverContextProvider } from "./Hooks/useObserverContext";
 
 function App() {
+  const [visibleElement, observe, unobserve] = useIntersectionObserver();
+
   return (
     <>
       <header>
         <NavBar />
       </header>
       <main>
-        <Landing />
-        <TopSeparator />
-        <About />
-        <BottomSeparator />
-        <Skills />
-        <TopSeparator />
-        <Projects />
-        <BottomSeparator />
-        <Contact />
-        <TopSeparator />
+        <ObserverContextProvider value={{ visibleElement, observe, unobserve }}>
+          <Landing />
+          <TopSeparator />
+          <About />
+          <BottomSeparator />
+          <Skills />
+          <TopSeparator />
+          <Projects />
+          <BottomSeparator />
+          <Contact />
+          <TopSeparator />
+        </ObserverContextProvider>
       </main>
     </>
-
   );
 }
 
