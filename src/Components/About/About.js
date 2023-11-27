@@ -1,16 +1,46 @@
-import './About.css'
-import Portrait from './prfl.jpg'
+import Portrait from "../../Assets/prfl.jpg";
+import useObserveSection from "../../Hooks/useObserveSection";
+import "./About.css";
 
 export default function About() {
+  const [aboutRef, visibleElement] = useObserveSection();
+
+  const isVisible = visibleElement?.target === aboutRef.current;
+
   return (
-    <section id='about'>
-        <div className='about-container'>
-            <img src={Portrait} alt='Portrait of Lóránt Kiszner' className='portrait'/>
-            <div>
-                <h2 className='white-h2'>About me</h2>
-                <p className='white-p'>I've led an unconventional life so far. I had the opportunity not to work for 8 years during which I trained dogs, learned to build and repair various things. I love nature, often exploring off-road paths. Additionally, I spent a significant portion of my time in a complex online game where our team ranked in the top 100 out of 3 million players. This experience allowed me to practice teamwork and solving complex problems, either individually or collaboratively. All of this contributed to shaping my open-minded, critical, analytical, creative, independent, and persevering personality.</p>
-            </div>
+    <section
+      id='about'
+      ref={aboutRef}
+      className={`${isVisible ? "visible" : ""}`}
+    >
+      <div className='about-container'>
+        <div className='portrait-container'>
+          <img
+            src={Portrait}
+            alt='Portrait of Lóránt Kiszner'
+            className='portrait'
+          />
         </div>
+        <div className='intro-container'>
+          <h2 className='white-h2'>About me</h2>
+          <p className='white-p'>
+            A web developer passionate about efficiency and the art of
+            problem-solving. For over two years, I've immersed myself in the
+            world of web development, driven by a fascination with understanding
+            how things work. I'm an avid observer, seeking to unravel
+            complexities without judgment, and I'm continually inspired by the
+            innovative solutions people have crafted.
+          </p>
+          <p className='white-p'>
+            My goal is to contribute my own groundbreaking solutions someday.
+            Efficiency is my mantra, whether it's streamlining code or
+            optimizing daily routines. I believe in working smarter to achieve
+            exceptional results. I'm a firm believer in the power of teamwork,
+            and I'm always looking for new opportunities to collaborate with
+            others.
+          </p>
+        </div>
+      </div>
     </section>
-  )
+  );
 }
