@@ -1,31 +1,35 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 export default function useIntersectionObserver() {
-  const [visibleElement, setVisibleElement] = useState([]);
+  const [visibleElements, setVisibleElements] = useState([]);
   const observer = useRef(null);
 
   useEffect(() => {
-    observer.current = new IntersectionObserver(
-      (entries) => {
-        const visibleEntry = entries.find((entry) => entry.isIntersecting);
-        setVisibleElement(visibleEntry || null);
-      },
-      { threshold: 0.1 }
-    );
-    console.log("observer created");
+    if (!observer.current) {
+      observer.current = new IntersectionObserver(
+        (entries) => {
+          const visibleEntries = entries.filter(
+            (entry) => entry.isIntersecting
+          );
+          setVisibleElements((prev) => [
+            ...prev,
+            ...visibleEntries.filter(
+              (e) => !prev.find((p) => p.target.id === e.target.id)
+            ),
+          ]);
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+    }
+  }, [visibleElements]);
 
-    return () => {
-      if (observer.current) {
-        observer.current.disconnect();
-      }
-    };
-  }, []);
-
-  const observe = (element) => {
+  const observe = useCallback((element) => {
     if (observer.current) {
       observer.current.observe(element);
     }
-  };
+  }, []);
 
   const unobserve = useCallback(
     (element) => {
@@ -36,5 +40,5 @@ export default function useIntersectionObserver() {
     [observer]
   );
 
-  return [visibleElement, observe, unobserve];
+  return [visibleElements, observe, unobserve];
 }

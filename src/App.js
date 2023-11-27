@@ -9,7 +9,7 @@ import useIntersectionObserver from "./Hooks/useIntersectionObserver";
 import { ObserverContextProvider } from "./Hooks/useObserverContext";
 
 function App() {
-  const [visibleElement, observe, unobserve] = useIntersectionObserver();
+  const [visibleElements, observe, unobserve] = useIntersectionObserver();
 
   return (
     <>
@@ -17,7 +17,9 @@ function App() {
         <NavBar />
       </header>
       <main>
-        <ObserverContextProvider value={{ visibleElement, observe, unobserve }}>
+        <ObserverContextProvider
+          value={{ visibleElements, observe, unobserve }}
+        >
           <Landing />
           <TopSeparator />
           <About />

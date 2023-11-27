@@ -3,9 +3,9 @@ import useObserveSection from "../../Hooks/useObserveSection";
 import "./About.css";
 
 export default function About() {
-  const [aboutRef, visibleElement] = useObserveSection();
+  const [aboutRef, visibleElements] = useObserveSection();
 
-  const isVisible = visibleElement?.target === aboutRef.current;
+  const isVisible = visibleElements.find((e) => e.target.id === "about");
 
   return (
     <section

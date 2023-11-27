@@ -3,7 +3,6 @@ import Image from "../../Assets/dev.png";
 import "./Landing.css";
 
 //Hooks
-import useTypeAnimation from "../../Hooks/useTypeAnimation";
 
 // Icons
 import { AiFillHtml5 } from "react-icons/ai";
@@ -18,6 +17,7 @@ import {
 } from "react-icons/bi";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { SiDotnet } from "react-icons/si";
+import useTypeAnimation from "../../Hooks/useTypeAnimation";
 
 export default function Landing() {
   const [text] = useTypeAnimation();

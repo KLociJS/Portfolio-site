@@ -4,7 +4,7 @@ import { useObserverContext } from "./useObserverContext";
 export default function useObserveSection() {
   const ref = useRef(null);
 
-  const { visibleElement, observe, unobserve } = useObserverContext();
+  const { visibleElements, observe, unobserve } = useObserverContext();
 
   useEffect(() => {
     //clarify
@@ -16,5 +16,5 @@ export default function useObserveSection() {
     };
   }, [observe, unobserve]);
 
-  return [ref, visibleElement];
+  return [ref, visibleElements];
 }
