@@ -4,7 +4,7 @@
 
 .skills-container {
   max-width: 1200px;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
