@@ -1,23 +1,22 @@
+#skills {
+  min-height: 100vh;
+}
+
 .skills-container {
   max-width: 1200px;
-  margin: 5rem auto;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
 }
 
 .skills-content {
+  flex-basis: 100%;
   display: flex;
   justify-content: space-evenly;
   padding: 1rem;
   margin-top: 3rem;
   gap: 1rem;
-}
-
-@media screen and (max-width: 900px) {
-  .skills-content {
-    flex-direction: column;
-  }
-  .skills-description {
-    align-self: center;
-  }
 }
 
 .skills-text-container {
@@ -27,6 +26,7 @@
 .skills-heading {
   font-size: 3rem;
   letter-spacing: 0.3rem;
+  flex-basis: 100%;
 }
 
 .skills-description {
@@ -62,6 +62,17 @@
 @media screen and (max-width: 900px) {
   .tech {
     width: 100px;
+  }
+  .skill-bars {
+    align-self: stretch;
+  }
+  .skills-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills-description {
+    align-self: center;
+    margin-bottom: 2rem;
   }
 }
 
