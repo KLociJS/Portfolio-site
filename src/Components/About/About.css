@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-evenly;
   gap: 2rem;
+  height: 100%;
   max-width: 1200px;
   margin: auto;
   padding: 4rem 1rem;
@@ -10,6 +11,7 @@
 
 #about {
   background-color: var(--primary);
+  height: 100vh;
 }
 
 .intro-container {
@@ -39,7 +41,7 @@
 .visible .intro-container,
 .visible .portrait-container {
   transform: translateX(0);
-  transition: transform 1s ease-in-out;
+  transition: transform 1.5s ease-in-out;
 }
 .white-h2 {
   font-size: 3rem;
