@@ -1,5 +1,6 @@
 #projects {
   background-color: var(--primary);
+  min-height: 100vh;
 }
 
 .project-section-container {
