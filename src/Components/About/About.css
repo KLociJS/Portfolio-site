@@ -1,17 +1,18 @@
 .about-container {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 2rem;
+  justify-content: center;
+  gap: 10%;
   height: 100%;
-  max-width: 1200px;
-  margin: auto;
+  width: max(100%, 1200px);
   padding: 4rem 1rem;
 }
 
 #about {
+  display: flex;
+  align-items: center;
   background-color: var(--primary);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .intro-container {
@@ -60,5 +61,8 @@
   }
   .about-container > div > h2 {
     text-align: center;
+  }
+  .about-container {
+    gap: 2rem;
   }
 }
