@@ -81,7 +81,7 @@
   height: 2rem;
   background-color: var(--success);
 
-  transition: width 1s ease-in-out;
+  transition: width 1.5s ease-in-out;
 }
 
 .visible .w-50 {

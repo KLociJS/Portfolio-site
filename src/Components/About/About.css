@@ -6,6 +6,8 @@
   height: 100%;
   width: max(100%, 1200px);
   padding: 4rem 1rem;
+
+  overflow-y: hidden;
 }
 
 #about {
