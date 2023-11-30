@@ -2,18 +2,22 @@
   background-color: var(--primary);
   min-height: 100vh;
   position: relative;
+  display: flex;
 }
 
 .project-section-container {
   max-width: 1200px;
   margin: auto;
   padding: 5rem 0;
+  height: 100%;
 }
 .project-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: flex-start;
+
+  height: 100%;
 
   gap: 1rem;
   padding: 1rem;
@@ -116,7 +120,7 @@
   right: 50%;
 }
 .project-card:hover .card-live-site-button {
-  top: 28%;
+  top: 23%;
   opacity: 1;
 }
 .project-card:hover .card-github-button {

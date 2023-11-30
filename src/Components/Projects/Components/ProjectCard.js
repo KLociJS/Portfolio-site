@@ -14,6 +14,7 @@ export default function ProjectCard({
   title,
   projectType,
   stack,
+  hasDetails = true,
   githubUrl,
   websiteUrl,
   description,
@@ -72,9 +73,11 @@ export default function ProjectCard({
         GitHub <IoLogoGithub className='card-icon' />
       </a>
 
-      <button onClick={openModal} className='card-learn-more-button'>
-        Learn more <IoMdOpen className='card-icon' />
-      </button>
+      {hasDetails ? (
+        <button onClick={openModal} className='card-learn-more-button'>
+          Learn more <IoMdOpen className='card-icon' />
+        </button>
+      ) : null}
 
       {showModal ? (
         <div className='modal'>
@@ -90,9 +93,11 @@ export default function ProjectCard({
               <IoLogoGithub className='preview-icon' />
             </a>
 
-            <a href={websiteUrl} target='_blank' rel='noreferrer'>
-              <IoIosLink className='preview-icon' />
-            </a>
+            {websiteUrl ? (
+              <a href={websiteUrl} target='_blank' rel='noreferrer'>
+                <IoIosLink className='preview-icon' />
+              </a>
+            ) : null}
           </div>
 
           <div className='slider-wrapper'>
