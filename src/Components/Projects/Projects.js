@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react";
 import ProjectCard from "./Components/ProjectCard";
 import "./Projects.css";
 
@@ -13,25 +12,18 @@ import WdnNote from "../../Assets/wdn-note.png";
 import WdnProfile from "../../Assets/wdn-profile.png";
 
 export default function Projects() {
-  const projectSectionRef = useRef(null);
-  const [element, setElement] = useState(null);
-
-  useEffect(() => {
-    setElement(projectSectionRef.current);
-  }, []);
-
   return (
-    <section id='projects' ref={projectSectionRef}>
+    <section id='projects'>
       <div className='project-section-container'>
         <h2 className='section-header-light'>My projects</h2>
         <div className='project-container'>
           <ProjectCard
-            parentRef={element}
+            stack='React JS'
             projectType='Solo Project'
             title='Portfolio project'
             description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard "
-            githubLink='https://github.com/KLociJS/Portfolio-site'
-            images={[WdnHome, WdnNote, WdnProfile]}
+            githubUrl='https://github.com/KLociJS/Portfolio-site'
+            images={[]}
             thumbnail={
               <img
                 src={PortfolioThumbnail}
@@ -41,11 +33,13 @@ export default function Projects() {
             }
           ></ProjectCard>
           <ProjectCard
-            parentRef={element}
+            stack='React JS / .NET / PostgreSQL'
             projectType='Solo Project'
             title='Learning app'
             description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard "
-            githubLink='https://github.com/KLociJS/LearningApp'
+            images={[WdnHome, WdnNote, WdnProfile]}
+            githubUrl='https://github.com/KLociJS/LearningApp'
+            websiteUrl='http://52.57.115.197/'
             thumbnail={
               <img
                 src={LearningAppThumbnail}
@@ -55,11 +49,11 @@ export default function Projects() {
             }
           ></ProjectCard>
           <ProjectCard
-            parentRef={element}
+            stack='React JS / .NET / PostgreSQL'
             projectType='Team Project'
             title='Eventure'
             description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard "
-            githubLink='https://github.com/KLociJS/Advanced-team-project'
+            githubUrl='https://github.com/KLociJS/Advanced-team-project'
             thumbnail={
               <img
                 src={EventureThumbnail}
