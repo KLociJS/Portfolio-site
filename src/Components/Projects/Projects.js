@@ -14,10 +14,18 @@ import WdnProfile from "../../Assets/wdn-profile.png";
 import EventureCreate from "../../Assets/eventure-create.png";
 import EventureDashboard from "../../Assets/eventure-dashboard.png";
 import EventureEvents from "../../Assets/eventure-events.png";
+import useObserveSection from "../../Hooks/useObserveSection";
 
 export default function Projects() {
+  const [projectsRef, visibleElements] = useObserveSection();
+  const isVisible = visibleElements.find((e) => e.target.id === "projects");
+
   return (
-    <section id='projects'>
+    <section
+      id='projects'
+      className={`${isVisible ? "visible" : ""}`}
+      ref={projectsRef}
+    >
       <div className='project-section-container'>
         <h2 className='section-header-light'>projects</h2>
         <div className='project-container'>

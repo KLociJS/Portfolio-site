@@ -31,11 +31,20 @@
   flex-direction: column;
   align-items: center;
 
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 1.5s ease-in-out;
+
   flex-shrink: 1;
 
   padding: 1rem;
 
   background-color: var(--secondary);
+}
+
+.visible .project-card {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .project-card::before {
