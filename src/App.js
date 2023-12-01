@@ -27,9 +27,7 @@ function App() {
           <Skills />
           <TopSeparator />
           <Projects />
-          <BottomSeparator />
           <Contact />
-          <TopSeparator />
         </ObserverContextProvider>
       </main>
     </>
