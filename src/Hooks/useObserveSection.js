@@ -8,8 +8,12 @@ export default function useObserveSection() {
 
   useEffect(() => {
     //clarify
+
+    setTimeout(() => {
+      observe(ref.current);
+    }, 100);
+
     const element = ref.current;
-    observe(ref.current);
 
     return () => {
       unobserve(element);
